@@ -1,0 +1,39 @@
+GET
+Listar todas las categorías
+http://localhost:8080/categoria/todas
+
+GET
+Obtener todos los productos ordenados por precio (ascendente o descendente)
+http://localhost:8080/categoria?order_price=asc
+
+GET
+Obtener los productos filtrando por marca
+http://localhost:8080/categoria?marca=samsung
+
+DELETE
+Eliminar categoría
+http://localhost:8080/categoria/ATV
+
+POST
+Nueva categoría
+http://localhost:8080/categoria
+{
+    "identificador": "NUE",
+    "nombre": "Nueva Categoría",
+    "descripcion": "Descripción de la nueva categoría",
+    "tipo": "OTROS"
+}
+
+PUT
+Modificar categoría
+http://localhost:8080/categoria/ATV
+{
+        "identificador": "ATV",
+        "nombre": "Audio, TV y Video modificado 01",
+        "descripcion": "Productos de audio y video",
+        "tipo": "TV_AUDIO_VIDEO"
+}
+
+GET
+Obtener productos filtrando por precio
+http://localhost:8080/categoria?precio_min=280000&precio_max=320000

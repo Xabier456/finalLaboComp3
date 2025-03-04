@@ -1,0 +1,59 @@
+GET
+Listar todos los productos
+http://localhost:8080/producto/todos
+
+POST
+Nuevo producto
+http://localhost:8080/producto
+{
+    "identificador": "TV002",
+    "nombre": "Smart TV Samsung 65",
+    "descripcion": "Smart TV Samsung 65 pulgadas 4K",
+    "marca": "Samsung",
+    "precioLista": 550000.0,
+    "tipoProducto": "televisor",
+    "categoria": {
+        "identificador": "ATV"
+    },
+    "especificaciones": [
+        "65 pulgadas",
+        "4K UHD",
+        "Smart TV",
+        "HDR",
+        "Tizen OS"
+    ]
+}
+
+PUT
+Modificar producto
+http://localhost:8080/producto/TV002
+{
+    "identificador": "TV002",
+    "nombre": "Smart TV Samsung 65 MODIFICADO",
+    "descripcion": "Smart TV Samsung 65 pulgadas 4K",
+    "marca": "Samsung",
+    "precioLista": 550000.0,
+    "tipoProducto": "televisor",
+    "categoria": {
+        "identificador": "ATV"
+    },
+    "especificaciones": [
+        "65 pulgadas",
+        "4K UHD",
+        "Smart TV",
+        "HDR",
+        "Tizen OS"
+    ]
+}
+
+DELETE
+Eliminar producto
+http://localhost:8080/producto/TV002
+
+GET
+buscar producto por identificador
+http://localhost:8080/producto/NOTE001
+
+GET
+Consultar un producto por alguno de sus atributos
+http://localhost:8080/producto?tipo_producto=notebook&marca=HP&categoria=INF
